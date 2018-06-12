@@ -109,6 +109,10 @@ describe Weather do
       expect(@single_service.get_type).to be_kind_of(Integer)
     end
 
+    it "should put sys id as an integer" do
+      expect(@single_service.get_sys_id).to be_kind_of(Integer)
+    end
+
     it "should put the country as a string" do
       expect(@single_service.get_country).to be_kind_of(String)
     end
