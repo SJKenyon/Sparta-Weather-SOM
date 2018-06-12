@@ -106,11 +106,15 @@ describe Weather do
     end
 
     it "should put type as an integer" do
-      expect(@single_service.get_type).to be_kind_of(Integer)
+      expect(@single_service.get_type).to be_kind_of(Integer).or be nil
     end
 
     it "should put sys id as an integer" do
-      expect(@single_service.get_sys_id).to be_kind_of(Integer)
+      expect(@single_service.get_sys_id).to be_kind_of(Integer).or be nil
+    end
+
+    it "should put message as a float" do
+      expect(@single_service.get_message).to be_kind_of(Float)
     end
 
     it "should put the country as a string" do
