@@ -1,5 +1,5 @@
 require_relative "services/city_service"
-require_relative "services/random_city_service"
+# require_relative "services/random_city_service"
 require_relative "services/city_ids"
 
 class Weather

@@ -18,6 +18,6 @@ class RandomCityService
 end
 
 call = RandomCityService.new
-puts call.get_random_city
+# puts call.get_random_city
 call.get_result
 # puts call.get_postcode

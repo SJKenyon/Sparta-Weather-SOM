@@ -3,11 +3,11 @@ require "yaml"
 class RandomId
 
   def initialize
-    @idfile = YAML.load_file('lib/services/city_id.yml')
+    @idfile = YAML.load_file('/Users/tech-a23/Documents/engineering-9/SDET/Sparta-Weather-SOM/lib/city_id.yml')
   end
 
   def ids
-    puts @idfile
+    @idfile
   end
 
 end
