@@ -88,6 +88,11 @@ describe Weather do
     end
 
     # Testing clouds
+
+    it "should put cloud coverage as an integer" do
+      expect(@single_service.get_clouds).to be_kind_of(Integer)
+    end
+
     # Testing dt
     # Testing sys
     # Testing id
@@ -101,10 +106,6 @@ describe Weather do
 
     it "should put the ID as a float or integer" do
       expect(@single_service.get_id).to be_kind_of(String).or be_kind_of(Integer)
-    end
-
-    it "should put cloud coverage as an integer" do
-      expect(@single_service.get_clouds).to be_kind_of(Integer)
     end
 
     it "should put the country as a string" do
