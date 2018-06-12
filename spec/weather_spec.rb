@@ -68,6 +68,11 @@ describe Weather do
     end
 
     # Testing visibility
+
+    it "should put the visibility as an integer" do
+      expect(@single_service.get_visibility).to be_kind_of(Integer)
+    end
+
     # Testing wind
     # Testing clouds
     # Testing dt
