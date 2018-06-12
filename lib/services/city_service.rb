@@ -14,8 +14,12 @@ class SingleCityService
     @single_city_data["name"]
   end
 
+  def get_id
+    @single_city_data["id"]
+  end
+
 end
 
 # call = SingleCityService.new
-# puts call.get_single_city(2172797)
+# puts call.get_single_city(id)
 # puts call.get_city
