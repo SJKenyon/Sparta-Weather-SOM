@@ -79,30 +79,46 @@ class SingleCityService
     @single_city_data["main"]["temp_max"]
   end
 
-
   # Visibility
+
+  def get_visibility
+    @single_city_data["visibility"]
+  end
+
   # Wind
-  # Clouds
-  # Dt
-  # Sys
-  # ID
-  # Name
-  # Cod
-
-  def get_city
-    @single_city_data["name"]
-  end
-
-  def get_id
-    @single_city_data["id"]
-  end
 
   def get_wind_speed
     @single_city_data["wind"]["speed"]
   end
 
+  def get_wind_deg
+    @single_city_data["wind"]["deg"]
+  end
+
+  # Clouds
+
   def get_clouds
     @single_city_data["clouds"]["all"]
+  end
+
+  # Dt
+
+  def get_dt
+    @single_city_data["dt"]
+  end
+
+  # Sys
+
+  def get_type
+    @single_city_data["sys"]["type"]
+  end
+
+  def get_sys_id
+    @single_city_data["sys"]["id"]
+  end
+
+  def get_message
+    @single_city_data["sys"]["message"]
   end
 
   def get_country
@@ -116,6 +132,26 @@ class SingleCityService
   def get_sunset
     @single_city_data["sys"]["sunset"]
   end
+
+  # ID
+
+  def get_id
+    @single_city_data["id"]
+  end
+
+  # Name
+
+  def get_city
+    @single_city_data["name"]
+  end
+
+  # Cod
+
+  def get_cod
+    @single_city_data["cod"]
+  end
+
+  # Weather Forcast
 
   def get_weather_forcast
     puts "The weather in " + @single_city_data["name"] + ", " + @single_city_data["sys"]["country"] + " today is " + @single_city_data["weather"][0]["main"] + ". The temperature is " + @single_city_data["main"]["temp"].to_s + "F with humidity of " + @single_city_data["main"]["humidity"].to_s + "%. The wind speed is " + @single_city_data["wind"]["speed"].to_s + " m/s."
