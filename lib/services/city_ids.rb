@@ -10,7 +10,12 @@ class RandomId
     @idfile
   end
 
+  def random
+    @idfile.sample
+  end
+
 end
 
 yaml = RandomId.new
 yaml.ids
+yaml.random
