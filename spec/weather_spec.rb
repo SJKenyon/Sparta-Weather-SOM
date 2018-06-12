@@ -60,7 +60,7 @@ describe Weather do
     end
 
     it "should put the pressure as an integer" do
-      expect(@single_service.get_pressure).to be_kind_of(Integer)
+      expect(@single_service.get_pressure).to be_kind_of(Integer).or be_kind_of(Float).or be nil
     end
 
     it "should put the humidity as an integer" do
@@ -70,7 +70,7 @@ describe Weather do
     # Testing visibility
 
     it "should put the visibility as an integer" do
-      expect(@single_service.get_visibility).to be_kind_of(Integer)
+      expect(@single_service.get_visibility).to be_kind_of(Integer).or be nil
     end
 
     # Testing wind
@@ -84,7 +84,7 @@ describe Weather do
     end
 
     it "should return wind degrees as a float or integer" do
-      expect(@single_service.get_wind_deg).to be_kind_of(Float).or be_kind_of(Integer)
+      expect(@single_service.get_wind_deg).to be_kind_of(Float).or be_kind_of(Integer).or be nil
     end
 
     # Testing clouds
