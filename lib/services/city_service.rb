@@ -56,8 +56,7 @@ class SingleCityService
   end
 
   def get_weather
-    puts "The weather in " + @single_city_data["name"] + " today is " + @single_city_data["weather"][0]["main"]
-    puts @single_city_data["sys"]["sunrise"]
+    puts "The weather in " + @single_city_data["name"] + @single_city_data["sys"]["country"] + " today is " + @single_city_data["weather"][0]["main"] + ". The temperature is " + @single_city_data["main"]["temp"].to_s + "F with humidity of " + @single_city_data["main"]["humidity"].to_s + "%. The wind speed is " + @single_city_data["wind"]["speed"].to_s + " m/s."
   end
 
 end
