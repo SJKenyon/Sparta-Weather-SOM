@@ -79,7 +79,13 @@ describe Weather do
       expect(@single_service.get_wind_hash).to be_kind_of(Hash)
     end
 
-    
+    it "should put wind speed as a float or integer" do
+      expect(@single_service.get_wind_speed).to be_kind_of(Float).or be_kind_of(Integer)
+    end
+
+    it "should return wind degrees as a float or integer" do
+      expect(@single_service.get_wind_deg).to be_kind_of(Float).or be_kind_of(Integer)
+    end
 
     # Testing clouds
     # Testing dt
@@ -95,10 +101,6 @@ describe Weather do
 
     it "should put the ID as a float or integer" do
       expect(@single_service.get_id).to be_kind_of(String).or be_kind_of(Integer)
-    end
-
-    it "should put wind speed as a float or integer" do
-      expect(@single_service.get_wind_speed).to be_kind_of(Float).or be_kind_of(Integer)
     end
 
     it "should put cloud coverage as an integer" do
