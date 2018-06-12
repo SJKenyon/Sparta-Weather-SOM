@@ -74,6 +74,13 @@ describe Weather do
     end
 
     # Testing wind
+
+    it "should return a hash for wind" do
+      expect(@single_service.get_wind_hash).to be_kind_of(Hash)
+    end
+
+    
+
     # Testing clouds
     # Testing dt
     # Testing sys
