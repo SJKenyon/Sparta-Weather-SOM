@@ -101,7 +101,21 @@ describe Weather do
 
     # Testing sys
 
+    it "should return a hash for sys" do
+      expect(@single_service.get_sys_hash).to be_kind_of(Hash)
+    end
 
+    it "should put the country as a string" do
+      expect(@single_service.get_country).to be_kind_of(String)
+    end
+
+    it "should put the sunrise as an integer" do
+      expect(@single_service.get_sunrise).to be_kind_of(Integer)
+    end
+
+    it "should put the sunset as an integer" do
+      expect(@single_service.get_sunset).to be_kind_of(Integer)
+    end
 
     # Testing id
 
@@ -117,19 +131,8 @@ describe Weather do
 
     # Testing cod
 
-
-
-
-    it "should put the country as a string" do
-      expect(@single_service.get_country).to be_kind_of(String)
-    end
-
-    it "should put the sunrise as an integer" do
-      expect(@single_service.get_sunrise).to be_kind_of(Integer)
-    end
-
-    it "should put the sunset as an integer" do
-      expect(@single_service.get_sunset).to be_kind_of(Integer)
+    it "should put cod as an integer" do
+      expect(@single_service.get_cod).to be_kind_of(Integer)
     end
 
 end
