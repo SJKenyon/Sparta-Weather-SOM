@@ -1,1 +1,1 @@
-# Sparta-Weather-SOM
+# Open Weather SOM
