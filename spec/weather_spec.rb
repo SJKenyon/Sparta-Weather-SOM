@@ -17,4 +17,36 @@ describe Weather do
       expect(@single_service.get_id).to be_kind_of(String).or be_kind_of(Integer)
     end
 
+    it "should put the description as a string" do
+      expect(@single_service.get_desc).to be_kind_of(String)
+    end
+
+    it "should put the temperature as a float" do
+      expect(@single_service.get_temp).to be_kind_of(Float)
+    end
+
+    it "should put the humidity as an integer" do
+      expect(@single_service.get_humidity).to be_kind_of(Integer)
+    end
+
+    it "should put wind speed as a float" do
+      expect(@single_service.get_wind_speed).to be_kind_of(Float)
+    end
+
+    it "should put cloud coverage as an integer" do
+      expect(@single_service.get_clouds).to be_kind_of(Integer)
+    end
+
+    it "should put the country as a string" do
+      expect(@single_service.get_country).to be_kind_of(String)
+    end
+
+    it "should put the sunrise as " do
+      expect(@single_service.get_sunrise).to
+    end
+
+    it "should put the sunset as " do
+      expect(@single_service.get_sunset).to
+    end
+
 end

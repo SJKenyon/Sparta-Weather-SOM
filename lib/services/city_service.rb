@@ -1,5 +1,6 @@
 require 'httparty'
 require 'json'
+require_relative "city_ids"
 
 class SingleCityService
   include HTTParty
@@ -18,8 +19,49 @@ class SingleCityService
     @single_city_data["id"]
   end
 
+  def get_main
+    @single_city_data["weather"][0]["main"]
+  end
+
+  def get_desc
+    @single_city_data["weather"][0]["description"]
+  end
+
+  def get_temp
+    @single_city_data["main"]["temp"]
+  end
+
+  def get_humidity
+    @single_city_data["main"]["humidity"]
+  end
+
+  def get_wind_speed
+    @single_city_data["wind"]["speed"]
+  end
+
+  def get_clouds
+    @single_city_data["clouds"]["all"]
+  end
+
+  def get_country
+    @single_city_data["sys"]["country"]
+  end
+
+  def get_sunrise
+    @single_city_data["sys"]["sunrise"]
+  end
+
+  def get_sunset
+    @single_city_data["sys"]["sunset"]
+  end
+
+  def get_weather
+    puts "The weather in " + @single_city_data["name"] + " today is " + @single_city_data["weather"][0]["main"]
+    puts @single_city_data["sys"]["sunrise"]
+  end
+
 end
 
-# call = SingleCityService.new
-# puts call.get_single_city(id)
-# puts call.get_city
+call = SingleCityService.new
+call.get_single_city(RandomId.new.random)
+call.get_weather
