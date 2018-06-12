@@ -87,6 +87,10 @@ class SingleCityService
 
   # Wind
 
+  def get_wind_hash
+    @single_city_data["wind"]
+  end
+
   def get_wind_speed
     @single_city_data["wind"]["speed"]
   end
@@ -108,6 +112,10 @@ class SingleCityService
   end
 
   # Sys
+
+  def get_sys_hash
+    @single_city_data["sys"]
+  end
 
   def get_type
     @single_city_data["sys"]["type"]

@@ -54,6 +54,19 @@ describe Weather do
     end
 
     # Testing main
+
+    it "should put the temperature as a float" do
+      expect(@single_service.get_temp).to be_kind_of(Float)
+    end
+
+    it "should put the pressure as an integer" do
+      expect(@single_service.get_pressure).to be_kind_of(Integer)
+    end
+
+    it "should put the humidity as an integer" do
+      expect(@single_service.get_humidity).to be_kind_of(Integer)
+    end
+
     # Testing visibility
     # Testing wind
     # Testing clouds
@@ -70,14 +83,6 @@ describe Weather do
 
     it "should put the ID as a float or integer" do
       expect(@single_service.get_id).to be_kind_of(String).or be_kind_of(Integer)
-    end
-
-    it "should put the temperature as a float" do
-      expect(@single_service.get_temp).to be_kind_of(Float)
-    end
-
-    it "should put the humidity as an integer" do
-      expect(@single_service.get_humidity).to be_kind_of(Integer)
     end
 
     it "should put wind speed as a float or integer" do
