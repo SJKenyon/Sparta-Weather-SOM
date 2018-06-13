@@ -27,7 +27,7 @@ describe Weather do
 
     # Testing weather
 
-    it "should have an array of length 4 inside weather" do
+    it "should have an array with 4 items inside weather" do
       expect(@single_service.get_weather_hash).to eq 4
     end
 
@@ -59,7 +59,7 @@ describe Weather do
       expect(@single_service.get_temp).to be_kind_of(Float)
     end
 
-    it "should put the pressure as an integer" do
+    it "should put the pressure as an integer or a float" do
       expect(@single_service.get_pressure).to be_kind_of(Integer).or be_kind_of(Float).or be nil
     end
 
