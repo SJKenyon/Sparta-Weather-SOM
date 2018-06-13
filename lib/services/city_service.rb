@@ -162,11 +162,11 @@ class SingleCityService
   # Weather Forcast
 
   def get_weather_forcast
-    puts "The weather in " + @single_city_data["name"] + ", " + @single_city_data["sys"]["country"] + " today is " + @single_city_data["weather"][0]["main"] + ". The temperature is " + @single_city_data["main"]["temp"].to_s + "F with humidity of " + @single_city_data["main"]["humidity"].to_s + "%. The wind speed is " + @single_city_data["wind"]["speed"].to_s + " m/s."
+    puts "The weather in " + @single_city_data["name"] + ", " + @single_city_data["sys"]["country"] + " today is " + @single_city_data["weather"][0]["main"] + ". The temperature is " + @single_city_data["main"]["temp"].to_s + "K with humidity of " + @single_city_data["main"]["humidity"].to_s + "%. The wind speed is " + @single_city_data["wind"]["speed"].to_s + " m/s."
   end
 
 end
 
-# call = SingleCityService.new
-# call.get_single_city(RandomId.new.random)
-# call.get_weather_forcast
+call = SingleCityService.new
+call.get_single_city(RandomId.new.random)
+call.get_weather_forcast

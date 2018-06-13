@@ -15,11 +15,17 @@ This software was created to test outputs from the open weather API with random 
 
 ### To run the tests
 
-1. CD into the new file system
-2. Run the command
+1. Change directory into the new file system.
+2. Run the following command to make sure all the gems are installed on your PC.
+
+  ```
+  bundle
+  ```
+
+3. Run the command:
 
   ```
   rspec
   ```
 
-3. This should run all the tests. They will be green if they pass and red if they fail
+4. This will run all the tests. They will be green if they pass and red if they fail.
